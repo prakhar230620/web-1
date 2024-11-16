@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PhotoMaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo gradient-text apple-animation">PhotoMaster</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="about-page">
+            <div class="container">
+                <h1 class="gradient-text scroll-animation">About PhotoMaster</h1>
+                <div class="about-content">
+                    <div class="about-image scroll-animation">
+                        <img src="https://via.placeholder.com/600x400" alt="Photographer at work" class="image-hover">
+                    </div>
+                    <div class="about-text scroll-animation">
+                        <h2 class="gradient-text">Our Story</h2>
+                        <p>Founded in 2010, PhotoMaster has been capturing life's most precious moments for over a decade. Our passion for photography drives us to create stunning visual stories that our clients will cherish for years to come.</p>
+                        <p>With a team of experienced and creative photographers, we specialize in weddings, portraits, events, and nature photography. Our unique approach combines technical expertise with an artistic eye, resulting in images that are both beautiful and meaningful.</p>
+                        <p>At PhotoMaster, we believe that every moment is worth capturing, and we're dedicated to providing our clients with an exceptional photography experience from start to finish.</p>
+                        <a href="contact.html" class="btn apple-animation">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="gradient-text scroll-animation">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member scroll-animation">
+                        <img src="https://via.placeholder.com/300x300" alt="John Doe" class="image-hover">
+                        <h3>John Doe</h3>
+                        <p>Lead Photographer</p>
+                    </div>
+
+                    <div class="team-member scroll-animation">
+                        <img src="https://via.placeholder.com/300x300" alt="Jane Smith" class="image-hover">
+                        <h3>Jane Smith</h3>
+                        <p>Portrait Specialist</p>
+                    </div>
+
+                    <div class="team-member scroll-animation">
+                        <img src="https://via.placeholder.com/300x300" alt="Mike Johnson" class="image-hover">
+                        <h3>Mike Johnson</h3>
+                        <p>Event Photographer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="gradient-text">PhotoMaster</h3>
+                    <p>Capturing life's beautiful moments, one frame at a time.</p>
+                    <p>Follow on :</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24" alt="Instagram icon" class="image-hover"></a>
+                        <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24" alt="Facebook icon" class="image-hover"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24" alt="Twitter icon" class="image-hover"></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Photography St<br>
+                    City, State 12345<br>
+                    Phone: (123) 456-7890<br>
+                    Email: info@photomaster.com</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2023 PhotoMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollAnimations = document.querySelectorAll('.scroll-animation');
+
+            function checkScroll() {
+                scrollAnimations.forEach(animation => {
+                    const animationPosition = animation.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+
+                    if (animationPosition < screenPosition) {
+                        animation.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+        });
+    </script>
+</body>
+</html>
